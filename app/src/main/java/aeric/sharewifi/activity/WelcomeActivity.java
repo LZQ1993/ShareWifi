@@ -18,7 +18,7 @@ import static android.graphics.Color.GRAY;
  *
  * @author LZQ
  */
-public class WelcomeActivity extends BaseActivity{
+public class WelcomeActivity extends BaseActivity {
 
     @Bind(R.id.httpBtn)
     Button httpBtn;
@@ -30,6 +30,8 @@ public class WelcomeActivity extends BaseActivity{
     Button downloadBtn;
     @Bind(R.id.downloadPointBtn)
     Button downloadPointBtn;
+    @Bind(R.id.mainactivity2Btn)
+    Button mainactivity2Btn;
 
     @Override
     protected int initLayout() {
@@ -50,27 +52,32 @@ public class WelcomeActivity extends BaseActivity{
                 .bind(uploadImgBtn)
                 .bind(uploadFileBtn)
                 .bind(downloadBtn)
-                .bind(downloadPointBtn);
+                .bind(downloadPointBtn)
+                .bind(mainactivity2Btn);
     }
 
-    @OnClick({R.id.httpBtn,R.id.uploadImgBtn, R.id.uploadFileBtn, R.id.downloadBtn, R.id.downloadPointBtn})
+    @OnClick({R.id.httpBtn, R.id.uploadImgBtn, R.id.uploadFileBtn, R.id.downloadBtn, R.id.downloadPointBtn,R.id.mainactivity2Btn})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.httpBtn:
-                startActivity(new Intent(WelcomeActivity.this, aeric.sharewifi.activity.MainActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                 break;
             case R.id.uploadImgBtn:
-                startActivity(new Intent(WelcomeActivity.this, aeric.sharewifi.activity.UploadImageActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, UploadImageActivity.class));
                 break;
             case R.id.uploadFileBtn:
-                startActivity(new Intent(WelcomeActivity.this, aeric.sharewifi.activity.UploadFileActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, UploadFileActivity.class));
                 break;
             case R.id.downloadBtn:
-                startActivity(new Intent(WelcomeActivity.this, aeric.sharewifi.activity.DownloadActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, DownloadActivity.class));
                 break;
             case R.id.downloadPointBtn:
-                startActivity(new Intent(WelcomeActivity.this, aeric.sharewifi.activity.DownloadBreakpointsActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, DownloadBreakpointsActivity.class));
+                break;
+            case R.id.mainactivity2Btn:
+                startActivity(new Intent(WelcomeActivity.this, Main2Activity.class));
                 break;
         }
     }
+
 }

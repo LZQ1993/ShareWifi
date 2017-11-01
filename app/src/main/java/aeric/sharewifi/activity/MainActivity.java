@@ -167,7 +167,7 @@ public class MainActivity extends BaseActivity {
                         .setRequestType(RequestType.GET)//设置请求方式
                         .addHead("head", "test")//添加头参数
                         .addParam("param", "test")//添加接口参数
-                        .setDelayExec(2, TimeUnit.SECONDS)//延迟2秒执行
+                        .setDelayExec(1, TimeUnit.SECONDS)//延迟2秒执行
                         .build(),
                 new Callback() {
                     @Override

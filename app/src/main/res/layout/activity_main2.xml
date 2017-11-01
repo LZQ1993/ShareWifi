@@ -14,35 +14,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
-        android:text="网络请求示例"
-        android:onClick="sss"/>
+        android:text="网络接口请求"
+        />
 
-    <Button
-        android:id="@+id/uploadImgBtn"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:text="上传图片示例"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/uploadFileBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:text="上传文件示例"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/downloadBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:text="下载文件示例"/>
+        <TextView
+            android:id="@+id/resultTV"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"/>
+        <TextView
+            android:id="@+id/dataTV"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"/>
+        </LinearLayout>
+    </ScrollView>
 
-    <Button
-        android:id="@+id/downloadPointBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:text="断点下载文件示例"/>
 
 </LinearLayout>
